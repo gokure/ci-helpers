@@ -11,7 +11,7 @@ if ( ! function_exists('array_delete'))
 	function array_delete(&$array, $offset)
 	{
 		$value = NULL;
-		if (isset($array[$offset]))
+		if (array_key_exists($offset, $array)) {
 		{
 			$value = $array[$offset];
 			unset($array[$offset]);
